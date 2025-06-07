@@ -22,7 +22,7 @@ const getVB = (name: SocialIconName): string => {
  * @param {JsxSocialIconProps} props - The properties for the social icon component.
  * @param {SocialIconName} props.name - The name of the social icon to render.
  * @param {string} [props.href="#0"] - The URL to link to when the icon is clicked.
- * @param {string} [props.fillColor="currentColor"] - The fill color of the icon.
+ * @param {string} [props.fillColor="currentcolor"] - The fill color of the icon.
  * @param {number} [props.fillOpacity=0.7] - The fill opacity of the icon.
  * @param {number} [props.size=24] - The size of the icon in pixels.
  * @param {string} [props.title=name] - The title attribute for the SVG element.
@@ -33,7 +33,7 @@ export default function ReactSocialIcon({
 	name,
 	href = "https://example.com",
 	target = "_blank",
-	fillColor = "currentColor",
+	fillColor = "currentcolor",
 	fillOpacity = 0.7,
 	size = 24,
 	title = name,

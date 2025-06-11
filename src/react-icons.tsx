@@ -2,7 +2,7 @@
 import React from "react";
 import { type JSX, Suspense, useEffect, useState } from "react";
 import { icons } from "./icons.js";
-import type { IconName, Icons, JsxIconProps } from "./types.js";
+import type { IconName, Icons, ReactIconProps } from "./types.js";
 
 const getPathd = (name: IconName): string => {
 	const pd = icons.find((i) => i.name === name) as Icons;
@@ -15,7 +15,7 @@ const getVB = (name: IconName): string => {
 /**
  * ReactIcon is a functional component that renders an SVG icon.
  *
- * @param {JsxIconProps} props - The properties for the icon component.
+ * @param {ReactIconProps} props - The properties for the icon component.
  * @param {IconName} props.name - The name of the icon to be rendered.
  * @param {string} [props.fillColor="currentColor"] - The fill color of the icon.
  * @param {number} [props.fillOpacity=0.7] - The opacity of the icon's fill color.
@@ -30,11 +30,11 @@ const getVB = (name: IconName): string => {
  */
 export default function ReactIcon({
 	name,
-	fillColor = "currentColor",
+	fillColor = "currentcolor",
 	fillOpacity = 0.7,
 	size = 24,
 	title = name,
-}: JsxIconProps): JSX.Element {
+}: ReactIconProps): JSX.Element {
 	const [view_box, setViewBox] = useState<string>(() => getVB(name));
 	const [pathd, setPathd] = useState<string>(() => getPathd(name));
 	const [opacity, setOpacity] = useState<number>(fillOpacity);

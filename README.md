@@ -20,7 +20,7 @@ yarn add @lwe8/react-icons
 ## Use
 
 ```tsx
-import { ReactIcon, ReactSocialIcon } from "@lwe8/react-icons";
+import ReactIcon  from "@lwe8/react-icons";
 
 export function Home() {
   return (
@@ -32,15 +32,6 @@ export function Home() {
         fillOpacity={0.9}
         title="next-js"
       />
-      <ReactSocialIcon
-        name="github"
-        href="https://github.com/"
-        target="_blank"
-        size={36}
-        fillColor="#673ab8"
-        fillOpacity={0.9}
-        title="Link to my github profile"
-      />
     </main>
   );
 }
@@ -51,8 +42,6 @@ export function Home() {
 | Name          | Description                                                         |    Default               |
 | ------------- | ------------------------------------------------------------------- | :---------------------:  |
 | `name`        | Name of icon                                                        |                          |
-| `href`        | HTML Anchor Element Attribute "href" for `<ReactSocialIcon/>` only  | "https://example.com"    |
-| `target`      | HTML Anchor Element Attribute "target"for `<ReactSocialIcon/>` only |   "\_blank"              |
 | `title`       | Tooltip text for icon                                               |  name of icon            |
 | `size`        | Size for icon                                                       |       24                 |
 | `fillColor`   | Color for icon                                                      | "currentcolor"           |
